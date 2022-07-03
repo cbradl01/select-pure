@@ -3,9 +3,9 @@ import { css } from "lit";
 export const optionStyles = css`
   .option {
     align-items: center;
-    background-color: var(--background-color, #fff);
+    background-color: var(--option-background-color, #fff);
     box-sizing: border-box;
-    color: var(--color, #000);
+    color: var(--option-color, #000);
     cursor: pointer;
     display: flex;
     font-family: var(--font-family, inherit);
