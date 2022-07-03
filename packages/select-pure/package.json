@@ -15,7 +15,7 @@
     "prepublishOnly": "npm run build && cp -f ./../../README.md README.md",
     "test": "jest src",
     "test:mutations": "stryker run",
-    "prepare": "npm run build"
+    "prepare": "npm install; npm run build"
   },
   "keywords": [
     "select",
