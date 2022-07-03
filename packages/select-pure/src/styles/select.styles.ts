@@ -69,9 +69,9 @@ export const selectStyles = css`
     }
   }
   .dropdown {
-    background-color: var(--border-color, #000);
+    background-color: var(--dropdown-border-color, #000);
     border-radius: var(--border-radius, 4px);
-    border: var(--border-width, 1px) solid var(--border-color, #000);
+    border: var(--border-width, 1px) solid var(--dropdown-border-color, #000);
     display: none;
     flex-direction: column;
     gap: var(--border-width, 1px);
