@@ -9,7 +9,7 @@
     "build:watch": "lerna run build:watch --stream",
     "test": "lerna run test --stream",
     "test:mutations": "lerna run test:mutations --stream",
-    "prepare": "npm run build"
+    "prepare": "lerna run build"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^4.22.0",
