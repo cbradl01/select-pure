@@ -85,7 +85,10 @@ export class OptionPure extends LitElement {
         tabindex="${ifDefined(this.isDisabled ? undefined : "0")}"
       >
         <slot hidden @slotchange=${this.assignDisplayedLabel}></slot>
+        <p>
         ${this.displayedLabel}
+        <span></span>
+        <p>
       </div>
     `;
   }
