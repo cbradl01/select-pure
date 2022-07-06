@@ -24,6 +24,13 @@ export const optionStyles = css`
     background-color: var(--selected-background-color, #e3e3e3);
     color: var(--selected-color, #000);
   }
+  .selected:after {
+    content: '\\00d7';
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    width: 12px;
+  }
   .disabled {
     background-color: var(--disabled-background-color, #e3e3e3);
     color: var(--disabled-color, #000);
