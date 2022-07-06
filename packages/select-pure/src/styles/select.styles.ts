@@ -69,6 +69,9 @@ export const selectStyles = css`
     }
   }
   .dropdown {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-y: scroll;
     background-color: var(--dropdown-border-color, #000);
     border-radius: var(--border-radius, 4px);
     border: var(--border-width, 1px) solid var(--dropdown-border-color, #000);
@@ -82,6 +85,9 @@ export const selectStyles = css`
     top: calc(var(--select-height, 44px) + var(--dropdown-gap, 0px));
     width: calc(100% - var(--border-width, 1px) * 2);
     z-index: var(--dropdown-z-index, 2);
+  }
+  .dropdown::-webkit-scrollbar {
+    display: none;
   }
   .dropdown.visible {
     display: flex;
