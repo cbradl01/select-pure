@@ -24,12 +24,18 @@ export const optionStyles = css`
     background-color: var(--selected-background-color, #e3e3e3);
     color: var(--selected-color, #000);
   }
-  .selected:after {
-    content: '\\00d7';
-    display: inline-block;
-    height: 100%;
-    text-align: center;
-    width: 12px;
+  .selected p {
+    text-align: left;
+    width: 100%;
+    margin: 0;
+  }
+  .selected p span {
+    float: right;
+  }
+  .selected span:after {
+    content: '\\2713';
+    float: right;
+    vertical-align: middle;
   }
   .disabled {
     background-color: var(--disabled-background-color, #e3e3e3);
