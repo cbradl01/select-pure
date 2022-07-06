@@ -88,7 +88,7 @@ export class OptionPure extends LitElement {
         <p>
         ${this.displayedLabel}
         <span></span>
-        <p>
+        </p>
       </div>
     `;
   }
