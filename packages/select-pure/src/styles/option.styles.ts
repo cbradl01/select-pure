@@ -27,7 +27,6 @@ export const optionStyles = css`
   .selected p {
     text-align: left;
     width: 100%;
-    margin: 0 !important;
   }
   .selected p span {
     float: right;
