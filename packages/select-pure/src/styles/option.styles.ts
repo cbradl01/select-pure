@@ -22,6 +22,7 @@ export const optionStyles = css`
   }
   .selected {
     background-color: var(--selected-background-color, #e3e3e3);
+    border-color: var(--selected-background-color, #e3e3e3);
     color: var(--selected-color, #000);
   }
   .selected p {
