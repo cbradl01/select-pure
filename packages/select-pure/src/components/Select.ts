@@ -185,14 +185,8 @@ export class SelectPure extends LitElement {
   @boundMethod
   private getMultiSelectSelectedOptionHtml({ label, value }: Option) {
     return html`
-//       <span class="multi-selected">
       <span>
         ${label}
-//         <span
-//           class="cross"
-//           @click=${(event: Event) => this.fireOnSelectCallback(event, value)}
-//         >
-//         </span>
       </span>
     `;
   }
