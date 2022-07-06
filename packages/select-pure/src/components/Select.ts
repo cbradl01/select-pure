@@ -171,23 +171,28 @@ export class SelectPure extends LitElement {
 
   @boundMethod
   private getMultiSelectLabelHtml() {
-    return html`
-      <div class="multi-selected-wrapper">
-        ${this._selectedOptions.map(this.getMultiSelectSelectedOptionHtml)}
-      </div>
-    `;
+    if (this._selectedOptions.length>1){
+      return this._selectedOptions.length + " choices selected"
+    } else {
+      return html`
+        <div class="multi-selected-wrapper">
+          ${this._selectedOptions.map(this.getMultiSelectSelectedOptionHtml)}
+        </div>
+      `;
+    }
   }
 
   @boundMethod
   private getMultiSelectSelectedOptionHtml({ label, value }: Option) {
     return html`
-      <span class="multi-selected">
+//       <span class="multi-selected">
+      <span>
         ${label}
-        <span
-          class="cross"
-          @click=${(event: Event) => this.fireOnSelectCallback(event, value)}
-        >
-        </span>
+//         <span
+//           class="cross"
+//           @click=${(event: Event) => this.fireOnSelectCallback(event, value)}
+//         >
+//         </span>
       </span>
     `;
   }
