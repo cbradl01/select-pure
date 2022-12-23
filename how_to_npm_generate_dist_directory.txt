@@ -1,0 +1,28 @@
+How to generate the 'dist' directory of a GitHub repo (to allow making customizations and then generate new dist files, such as minified files):
+
+Note: In order for the following steps to work, it is required that the npm package manager is installed on your machine.
+
+1) Download zip of the repo from GitHub (e.g., https://github.com/dudyn5ky1/select-pure)
+2) Make any changes you wish to the source code (note that certain changes may break the package or its build process -- if major changes are being made, it's probably best to fork the repo or create a pull request)
+3) Open terminal and cd into select-pure-master/packages/select-pure
+4) run 'npm install' -- this will install the dependencies of the package, which are defined in the package.json file
+5) run 'npm run build' -- this will build the package from the src files (i.e., the lib and dist directories will be generated)
+
+That's it!
+
+
+
+To install (sub directory/package) from GitHub repo and build:
+
+npm install 'https://gitpkg.now.sh/cbradl01/select-pure/packages/select-pure?master';
+cd node_modules/select-pure/; 
+npm install;
+cd ../..;
+
+Note: there is an open issue on npm (https://github.com/npm/cli/issues/4148#issue-1075883844) where the 'prepare' script doesn't work as expected (it should automatically build the package upon install, thereby removing the need for the last three commands above).
+
+One-liner version:
+npm install 'https://gitpkg.now.sh/cbradl01/select-pure/packages/select-pure?master';cd node_modules/select-pure/; npm install;cp ./dist/index.js ../../bps_forms/static/assets/selectpure/;cd ../..;
+
+See also: https://stackoverflow.com/a/57829251/18572704
+
